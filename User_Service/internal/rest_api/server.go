@@ -12,8 +12,13 @@ func NewHandler(logger *slog.Logger) *chi.Mux {
 	r := chi.NewRouter()
 	r.Use(loggingMiddleware(logger))
 
-	r.Get("/order/{id}", handler.getOrders)
-	r.Post("/order", handler.postOrders)
 	r.Get("/health", handler.getHealth)
+	r.Get("/cart", handler.getCart)
+	r.Get("/user", handler.getUser)
+
+	r.Post("/cart", handler.postCart)
+	r.Post("/goods", handler.postGoods)
+	r.Post("/user", handler.postUser)
+
 	return r
 }
