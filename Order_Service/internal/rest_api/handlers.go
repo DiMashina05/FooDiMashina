@@ -6,15 +6,11 @@ import (
 
 type Handler struct{}
 
-func (h *Handler) postOrders(w http.ResponseWriter, r *http.Request) {
-
-	//тут скоро что-то будет
-}
-
 func (h *Handler) getOrders(w http.ResponseWriter, r *http.Request) {
-	//тут скоро что-то будет
+	//тут скоро что-
 }
 
 func (h *Handler) getHealth(w http.ResponseWriter, r *http.Request) {
-	//тут скоро что-то будет
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(200)
 }

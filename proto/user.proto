@@ -1,7 +1,6 @@
 syntax = "proto3";
 
-package apifroproto;
-
+package user;
 
 service ServiceName {
   

@@ -13,7 +13,6 @@ func NewHandler(logger *slog.Logger) *chi.Mux {
 	r.Use(loggingMiddleware(logger))
 
 	r.Get("/order/{id}", handler.getOrders)
-	r.Post("/order", handler.postOrders)
 	r.Get("/health", handler.getHealth)
 	return r
 }
